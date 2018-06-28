@@ -1,11 +1,14 @@
 language: php
 
-php: 
-  - 7.0
+php:
   - 7.1
   - 7.2
 
+services:
+  - mongodb
+
 before_script:
+  - echo "extension = mongodb.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - travis_retry composer self-update
   - travis_retry composer install
 
