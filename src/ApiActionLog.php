@@ -7,18 +7,16 @@ use Illuminate\Foundation\Auth\User;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 /**
- * Class ApiActionLog
- * @package App\Models
+ * Class ApiActionLog.
  *
- * @property integer id
+ * @property int id
  * @property Carbon created_at
  * @property Carbon updated_at
- * @property integer user_id
+ * @property int user_id
  * @property string route_name
  * @property string uri
  * @property string method
  * @property string body
- *
  * @property User user
  */
 class ApiActionLog extends Model

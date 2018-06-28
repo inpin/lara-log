@@ -14,7 +14,7 @@ class LaraLogServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            realpath(__DIR__ . '/../migrations') => database_path('migrations'),
+            realpath(__DIR__.'/../migrations') => database_path('migrations'),
         ], 'migrations');
     }
 
