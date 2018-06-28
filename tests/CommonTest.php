@@ -35,7 +35,7 @@ class CommonTest extends TestCase
 
         $this->artisan('migrate', [
             '--database' => 'mongodb',
-            '--realpath' => realpath(__DIR__ . '/../migrations'),
+            '--realpath' => realpath(__DIR__.'/../migrations'),
         ]);
         $this->loadLaravelMigrations(['--database' => 'testbench']);
 
@@ -43,8 +43,8 @@ class CommonTest extends TestCase
 
         User::unguard();
         $this->user = User::query()->create([
-            'email' => $this->faker->unique()->email,
-            'name' => $this->faker->name,
+            'email'    => $this->faker->unique()->email,
+            'name'     => $this->faker->name,
             'password' => bcrypt($this->faker->password),
         ]);
         User::reguard();
@@ -54,6 +54,7 @@ class CommonTest extends TestCase
 
     /**
      * @param \Illuminate\Foundation\Application $app
+     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -72,18 +73,18 @@ class CommonTest extends TestCase
     {
         $app['config']->set('database.default', 'mongodb');
         $app['config']->set('database.connections.mongodb', [
-            'driver' => 'mongodb',
-            'host' => env('MONGO_HOST', '127.0.0.1'),
-            'port' => env('MONGO_PORT', 27017),
+            'driver'   => 'mongodb',
+            'host'     => env('MONGO_HOST', '127.0.0.1'),
+            'port'     => env('MONGO_PORT', 27017),
             'database' => env('MONGO_DATABASE', 'inpin'),
-            'options' => [
-                'database' => env('MONGO_DATABASE', 'inpin') // sets the authentication database required by mongo 3
-            ]
+            'options'  => [
+                'database' => env('MONGO_DATABASE', 'inpin'), // sets the authentication database required by mongo 3
+            ],
         ]);
         $app['config']->set('database.connections.testbench', [
-            'driver' => 'sqlite',
+            'driver'   => 'sqlite',
             'database' => ':memory:',
-            'prefix' => '',
+            'prefix'   => '',
         ]);
     }
 
@@ -106,12 +107,12 @@ class CommonTest extends TestCase
             return (new Response())->setContent('<html></html>');
         });
         $this->assertDatabaseHas('lara_log_api_action_logs', [
-            'uri' => 'http://localhost/abc',
+            'uri'  => 'http://localhost/abc',
             'body' => json_encode([
                 'field1' => 'value1',
                 'field2' => 'value2',
             ]),
-            'method' => 'POST'
+            'method' => 'POST',
         ], 'mongodb');
     }
 }
