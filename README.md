@@ -1,14 +1,14 @@
-LaraLike
+LaraLog
 ============
 Important note: this product is forked and edited from base [laravel-likeable](https://github.com/rtconner/laravel-likeable) package.
 
-[![Build Status](https://travis-ci.org/inpin/lara-like.svg?branch=master)](https://travis-ci.org/inpin/lara-like)
-[![StyleCI](https://styleci.io/repos/107395044/shield?branch=master)](https://styleci.io/repos/107395044)
-[![Maintainability](https://api.codeclimate.com/v1/badges/1283cd874bf869977edf/maintainability)](https://codeclimate.com/github/inpin/lara-like/maintainability)
-[![Latest Stable Version](https://poser.pugx.org/inpin/lara-like/v/stable)](https://packagist.org/packages/inpin/lara-like)
-[![Total Downloads](https://poser.pugx.org/inpin/lara-like/downloads)](https://packagist.org/packages/inpin/lara-like)
-[![Latest Unstable Version](https://poser.pugx.org/inpin/lara-like/v/unstable)](https://packagist.org/packages/inpin/lara-like)
-[![License](https://poser.pugx.org/inpin/lara-like/license)](https://packagist.org/packages/inpin/lara-like)
+[![Build Status](https://travis-ci.org/inpin/lara-log.svg?branch=master)](https://travis-ci.org/inpin/lara-log)
+[![StyleCI](https://github.styleci.io/repos/139015333/shield?branch=master)](https://github.styleci.io/repos/139015333)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c28c17bee1e0e6482921/maintainability)](https://codeclimate.com/github/inpin/lara-log/maintainability)
+[![Latest Stable Version](https://poser.pugx.org/inpin/lara-log/v/stable)](https://packagist.org/packages/inpin/lara-log)
+[![Total Downloads](https://poser.pugx.org/inpin/lara-log/downloads)](https://packagist.org/packages/inpin/lara-log)
+[![Latest Unstable Version](https://poser.pugx.org/inpin/lara-log/v/unstable)](https://packagist.org/packages/inpin/lara-log)
+[![License](https://poser.pugx.org/inpin/lara-log/license)](https://packagist.org/packages/inpin/lara-log)
 
 Trait for Laravel Eloquent models to allow easy implementation of a "like" or "favorite" or "remember" or what ever you want features.
 
